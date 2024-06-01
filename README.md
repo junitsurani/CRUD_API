@@ -145,4 +145,30 @@ curl -X POST http://localhost:8080/api/users \
     "name": "Junit Surani",
     "subjectMarks": {"Math": 90, "Science": 95}
 }'
+```
+
+### Get a User by ID
+
+```bash
+curl -X GET http://localhost:8080/api/users/1
+```
+
+### Update a User
+
+```bash
+curl -X PUT http://localhost:8080/api/users \
+-H "Content-Type: application/json" \
+-d '{
+    "id": "1",
+    "name": "Updated Name",
+    "subjectMarks": {"Math": 95, "Science": 98}
+}'
+```
+
+### Delete a User by ID
+
+```bash
+curl -X DELETE http://localhost:8080/api/users/1
+```
+
 
